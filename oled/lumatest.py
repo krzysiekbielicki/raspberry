@@ -7,7 +7,7 @@ from luma.oled.device import ssd1306
 serial = i2c(port=1, address=0x3C)
 
 # substitute ssd1331(...) or sh1106(...) below if using that device
-device = ssd1306(serial)
+device = ssd1306(serial, 128, 32)
 
 with canvas(device) as draw:
     draw.rectangle(device.bounding_box, outline="white", fill="black")
